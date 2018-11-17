@@ -1,0 +1,51 @@
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+}
+
+.progress-circle {
+    width: 33%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+path.circle-track {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+path.circle {
+    fill: none;
+    stroke: #b3e5fc;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+text.timer-display {
+    font-family: sans-serif;
+    text-anchor: middle;
+}
+
+#currentStage {
+    font-size: 0.5em;
+}
+
+#minutesBeforeTarget,
+#nextStage {
+    font-size: 0.1em;
+}

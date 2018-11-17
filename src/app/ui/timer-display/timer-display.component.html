@@ -1,0 +1,20 @@
+<div class="flex-wrapper">
+    <div class="progress-circle">
+        <svg viewBox="0 0 36 36">
+            <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+            <path class="circle" [attr.stroke-dasharray]="timer.remainingPercentage.toString() + ', 100'" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+
+            <text id="currentStage" class="timer-display" x="50%" y="55%">
+                {{timer.remainingMillis | timeFormat}}
+            </text>
+
+            <text id="minutesBeforeTarget" class="timer-display" x="50%" y="65%">
+                Minutes Before Target: {{timer.minutesBeforeTarget}}
+            </text>
+
+            <text id="nextStage" class="timer-display" x="50%" y="72.5%">
+                Next Stage: {{timer.nextStage.length | timeFormat}}
+            </text>
+        </svg>
+    </div>
+</div>
